@@ -1,6 +1,7 @@
 const player = document.getElementById("player");
 const enemy = document.getElementById("enemy");
-
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
 let playerX = 175;
 let enemyY = -120;
 let enemyX = Math.floor(Math.random() * 300) + 30;
