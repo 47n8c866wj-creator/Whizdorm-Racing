@@ -33,7 +33,20 @@ function gameLoop() {
 
     enemy.style.top = enemyY + "px";
     enemy.style.left = enemyX + "px";
+// Collision Detection
+const playerRect = player.getBoundingClientRect();
+const enemyRect = enemy.getBoundingClientRect();
 
+if (
+    playerRect.left < enemyRect.right &&
+    playerRect.right > enemyRect.left &&
+    playerRect.top < enemyRect.bottom &&
+    playerRect.bottom > enemyRect.top
+) {
+    alert("💥 Game Over!");
+    location.reload();
+    return;
+}
     requestAnimationFrame(gameLoop);
 }
 
