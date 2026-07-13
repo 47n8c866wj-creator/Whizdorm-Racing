@@ -38,3 +38,16 @@ function gameLoop() {
 }
 
 gameLoop();
+leftBtn.addEventListener("click", () => {
+    if (playerX > 20) {
+        playerX -= 20;
+        player.style.left = playerX + "px";
+    }
+});
+
+rightBtn.addEventListener("click", () => {
+    if (playerX < 330) {
+        playerX += 20;
+        player.style.left = playerX + "px";
+    }
+});
